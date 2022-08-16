@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.message {
+    --main-bg-color: #A8E700;
+    background-color: var(--main-bg-color);
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 50%;
+
+    margin-right: 10px;
+    z-index: 1;
+}
+
+.messageData {
+    display: flex;
+    max-width: 45%;
+    --message-data-color: #002303;
+    background-color: var(--message-data-color);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    padding: 10px 10px 10px 20px;
+    position: relative;
+}
+
+.messageData::before {
+    content: '';
+    position: absolute;
+    background-color: var(--message-data-color);
+    top: calc(100% - 35px);
+    bottom: 0;
+    right: 100%;
+    left: -9px;
+}
+
+.messageData::after {
+    content: '';
+    position: absolute;
+    background-color: var(--main-bg-color);
+    top: calc(100% - 35px);
+    bottom: 0;
+    right: 100%;
+    left: -20px;
+    border-bottom-right-radius: 70%;
+}
+
+.messageMain {
+    margin-right: 10px;
+}
+
+.authorContainer {
+
+}
+
+.author {
+    color: #af90fc;
+}
+
+.messageText {
+    color: white;
+}
+
+.messageTimeContainer {
+    position: relative;
+    width: 40px;
+}
+
+.messageTime {
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    color: #ffffff;
+    opacity: 0.2;
+}
