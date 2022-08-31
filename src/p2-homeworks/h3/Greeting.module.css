@@ -2,6 +2,28 @@
 
 }
 
+.addUser {
+    padding: 20px;
+}
+
+.input {
+    outline: none;
+    margin-right: 5px;
+}
+
+.addUserBtn {
+    margin-right: 5px;
+}
+
+.totalUsers {
+
+}
+
 .error {
     border: 1px solid red;
+}
+
+.errorText {
+    font-size: 14px;
+    color: red;
 }
