@@ -38,7 +38,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
         setName('')// need to fix
     }
 
-    const totalUsers = users.length // need to fix
+    const totalUsers:number = users.length // need to fix
 
     return (
         <Greeting

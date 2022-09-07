@@ -1,12 +1,14 @@
-import React from 'react'
+import React, {ChangeEvent} from 'react'
 import s from './Greeting.module.css'
+import SuperInputText from "../h4/common/c1-SuperInputText/SuperInputText";
+import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
 
 type GreetingPropsType = {
-    name: any // need to fix any
-    setNameCallback: any // need to fix any
-    addUser: any // need to fix any
-    error: any // need to fix any
-    totalUsers: any // need to fix any
+    name: string // need to fix any
+    setNameCallback: (e: ChangeEvent<HTMLInputElement>) => void // need to fix any
+    addUser: () => void // need to fix any
+    error: string // need to fix any
+    totalUsers: number // need to fix any
 }
 
 // презентационная компонента (для верстальщика)
@@ -17,10 +19,11 @@ const Greeting: React.FC<GreetingPropsType> = (
 
     return (
         <div className={s.addUser} >
-            <input value={name} onChange={setNameCallback} className={inputClass}/>
-            <button className={s.addUserBtn} onClick={addUser} disabled={!name}>add</button>
+            <div className={s.inputWrapper}>
+                <SuperInputText value={name} onChange={setNameCallback} error={error}/>
+            </div>
+            <SuperButton className={s.addUserBtn} onClick={addUser} disabled={!name}>add</SuperButton>
             <span className={s.totalUsers}>{totalUsers}</span>
-            {error && <div><span className={s.errorText}>{error}</span></div>}
         </div>
     )
 }
