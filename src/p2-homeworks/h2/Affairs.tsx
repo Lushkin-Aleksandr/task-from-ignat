@@ -2,6 +2,7 @@ import React, {Dispatch, SetStateAction} from 'react'
 import Affair from './Affair'
 import {AffairType, FilterType} from './HW2'
 import styles from './Affairs.module.css'
+import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
 
 type AffairsPropsType = {
     data: Array<AffairType>
@@ -42,10 +43,10 @@ function Affairs(props: AffairsPropsType) {
                 </div>
 
                 <div className={styles.filterBtns}>
-                    <button className={`${styles.filterBtn} ${props.filter === 'all' ? styles.active : ''}`} onClick={setAll}>All</button>
-                    <button className={`${styles.filterBtn} ${props.filter === 'high' ? styles.active : ''}`} onClick={setHigh}>High</button>
-                    <button className={`${styles.filterBtn} ${props.filter === 'middle' ? styles.active : ''}`} onClick={setMiddle}>Middle</button>
-                    <button className={`${styles.filterBtn} ${props.filter === 'low' ? styles.active : ''}`} onClick={setLow}>Low</button>
+                    <SuperButton className={`${styles.filterBtn} ${props.filter === 'all' ? styles.active : ''}`} onClick={setAll}>All</SuperButton>
+                    <SuperButton className={`${styles.filterBtn} ${props.filter === 'high' ? styles.active : ''}`} onClick={setHigh}>High</SuperButton>
+                    <SuperButton className={`${styles.filterBtn} ${props.filter === 'middle' ? styles.active : ''}`} onClick={setMiddle}>Middle</SuperButton>
+                    <SuperButton className={`${styles.filterBtn} ${props.filter === 'low' ? styles.active : ''}`} onClick={setLow}>Low</SuperButton>
                 </div>
             </div>
         </div>

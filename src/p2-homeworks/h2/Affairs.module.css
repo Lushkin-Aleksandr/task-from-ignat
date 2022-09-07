@@ -46,8 +46,6 @@
 
 .affairs button {
     border: none;
-
-    /*border-radius: 5px;*/
     cursor: pointer;
 }
 
@@ -66,12 +64,9 @@
 
 }
 
-
-
-.filterBtn {
-    padding: 10px 15px;
-    background-color: #3a3a3a;
-    color: #fff;
+.filterBtns .filterBtn {
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .filterBtn.active {
