@@ -1,7 +1,26 @@
-.default {
+.superButton {
+    border: 1px solid transparent;
+    cursor: pointer;
 
+}
+
+.superButton:disabled {
+    color: #9a9a9a;
+    border: 1px solid #9a9a9a;
+    background-color: transparent;
+}
+
+.superButton:disabled:hover {
+    cursor: not-allowed;
+}
+
+.default {
+    background-color: #3a3a3a;
+    color: white;
+    padding: 5px 10px;
 }
 
 .red {
     background: red;
+    color: white;
 }
