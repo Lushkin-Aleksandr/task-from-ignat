@@ -37,10 +37,14 @@
 
 
 
-
-.navItem a {
+.navLink {
     color: white;
     text-decoration: none;
+}
+
+.activeLink {
+    color: #e8ff00;
+    font-weight: bold;
 }
 
 
