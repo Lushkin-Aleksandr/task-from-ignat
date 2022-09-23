@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import SuperEditableSpan from './common/c4-SuperEditableSpan/SuperEditableSpan'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
 import {restoreState, saveState} from './localStorage/localStorage'
+import styles from './HW6.module.css'
 
 function HW6() {
     const [value, setValue] = useState<string>('')
@@ -10,7 +11,10 @@ function HW6() {
         saveState<string>('editable-span-value', value)
     }
     const restore = () => {
-        // setValue()
+        const newValue = value;
+        setValue(restoreState('editable-span-value', newValue))
+
+        // setValue(restoreState('editable-span-value', value))
     }
 
     return (
@@ -19,7 +23,7 @@ function HW6() {
             homeworks 6
 
             {/*should work (должно работать)*/}
-            <div>
+            <div className={styles.editableSpanWrapper}>
                 <SuperEditableSpan
                     value={value}
                     onChangeText={setValue}
